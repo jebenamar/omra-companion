@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "omra-prod",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve-static.mjs"],
+      "port": 3000
+    },
+    {
+      "name": "omra-dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev", "-p", "3001"],
+      "port": 3001
+    }
+  ]
+}

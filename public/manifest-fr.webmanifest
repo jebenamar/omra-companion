@@ -1,0 +1,43 @@
+{
+  "id": "/fr/",
+  "name": "Omra Companion — رفيق العمرة",
+  "short_name": "Omra",
+  "description": "Guide de la Omra hors ligne en quatre langues",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "/fr/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF7EF",
+  "theme_color": "#043D31",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "En pleine Omra",
+      "url": "/fr/umrah/focus/"
+    }
+  ]
+}

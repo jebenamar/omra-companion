@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/* Dark mode follows data-theme on <html> ("dark"), set before paint by an inline script. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ——— Design tokens ——— */
+:root {
+  --emerald: #075e45;
+  --emerald-deep: #043d31;
+  --gold: #c5a46d;
+  --ivory: #faf7ef;
+  --offwhite: #f8f6f1;
+  --ink: #17231e;
+
+  --background: var(--ivory);
+  --surface: #ffffff;
+  --surface-2: var(--offwhite);
+  --foreground: var(--ink);
+  --muted: #4b5a53;
+  --border: #e3dccb;
+  --primary: var(--emerald);
+  --primary-strong: var(--emerald-deep);
+  --primary-foreground: #ffffff;
+  --accent: var(--gold);
+  /* Gold darkened for text on light backgrounds (WCAG AA 4.5:1 on ivory). */
+  --accent-text: #7a5c22;
+  --danger: #a32121;
+  --focus: #0b7a5a;
+
+  --arabic-scale: 1;
+  --radius: 1rem;
+}
+
+[data-theme="dark"] {
+  --background: #0c1713;
+  --surface: #13221c;
+  --surface-2: #182a23;
+  --foreground: #f2eee4;
+  --muted: #b5c2bb;
+  --border: #2a3d35;
+  --primary: #3fb48b;
+  --primary-strong: #2b9572;
+  --primary-foreground: #04261d;
+  --accent: #d8bb85;
+  --accent-text: #e2c792;
+  --danger: #ff8a80;
+  --focus: #8fe3c4;
+}
+
+/* High-contrast mode for bright sunlight and crowded places. */
+[data-contrast="high"] {
+  --muted: var(--foreground);
+  --border: currentColor;
+}
+[data-contrast="high"]:not([data-theme="dark"]) {
+  --background: #ffffff;
+  --foreground: #000000;
+  --primary: #033327;
+  --accent-text: #5a4011;
+}
+[data-contrast="high"][data-theme="dark"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #7fffd0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-danger: var(--danger);
+  --color-emerald: var(--emerald);
+  --color-emerald-deep: var(--emerald-deep);
+  --color-gold: var(--gold);
+  --color-ivory: var(--ivory);
+  --color-ink: var(--ink);
+
+  --font-sans: var(--font-geist), var(--font-noto-arabic), system-ui, sans-serif;
+  --font-arabic-ui: var(--font-noto-arabic), var(--font-geist), system-ui, sans-serif;
+  --font-quran: var(--font-amiri), var(--font-noto-arabic), serif;
+  --radius-card: var(--radius);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--background);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+}
+
+html[lang="ar"] body {
+  font-family: var(--font-arabic-ui);
+}
+
+/* Arabic religious text: never altered, only styled. */
+.arabic-text {
+  font-family: var(--font-quran);
+  direction: rtl;
+  unicode-bidi: isolate;
+  text-align: start;
+  font-size: calc(1.6rem * var(--arabic-scale));
+  line-height: 2.1;
+  font-feature-settings: "liga", "calt";
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Directional icons flip in RTL. */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+.pattern-bg {
+  background-image: url("/patterns/star.svg");
+  background-size: 64px 64px;
+}
+
+.safe-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Leaflet (bundled, not from a CDN) */
+.leaflet-container {
+  font-family: var(--font-sans);
+  border-radius: var(--radius);
+}
