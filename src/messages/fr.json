@@ -281,6 +281,7 @@
     "p2": "Les textes arabes des invocations sont reproduits d'après les sources citées. Les traductions sont des traductions du sens rédigées pour cette application : elles ne sont pas officielles et doivent être validées par une personne qualifiée.",
     "p3": "Les écoles juridiques divergent sur certains points ; ces divergences sont signalées sans être tranchées. En cas de doute, demandez à un savant de confiance.",
     "p4": "Les informations pratiques (accès, réservations, autorisations) évoluent : vérifiez-les sur les plateformes officielles Nusuk et du ministère du Hajj et de la Omra.",
+    "privacy": "Mesure d'audience : l'application utilise Vercel Web Analytics, sans cookie ni identifiant personnel, pour compter les pages consultées. Votre progression, vos favoris et vos compteurs ne quittent jamais votre appareil.",
     "contentVersion": "Version du contenu : {version}"
   },
   "errors": {

@@ -127,6 +127,8 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return; // YouTube, map tiles… go to the network.
   if (url.pathname === MANIFEST_URL || url.pathname === "/sw.js") return;
+  // Vercel Analytics (script + beacons) always goes to the network and is never cached.
+  if (url.pathname.startsWith("/_vercel/")) return;
   if (request.mode === "navigate") event.respondWith(handleNavigation(request));
   else event.respondWith(handleAsset(request));
 });

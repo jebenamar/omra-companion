@@ -281,6 +281,7 @@
     "p2": "The Arabic texts of the supplications are reproduced from the cited sources. Translations are translations of meaning written for this app: they are not official and must be reviewed by a qualified person.",
     "p3": "Schools of jurisprudence differ on some points; these differences are noted without being settled. If in doubt, ask a trusted scholar.",
     "p4": "Practical information (access, bookings, permits) changes: check it on the official Nusuk and Ministry of Hajj and Umrah platforms.",
+    "privacy": "Audience measurement: the app uses Vercel Web Analytics, without cookies or personal identifiers, to count page views. Your progress, favourites and counters never leave your device.",
     "contentVersion": "Content version: {version}"
   },
   "errors": {

@@ -23,6 +23,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <p>{t("p2")}</p>
         <p>{t("p3")}</p>
         <p>{t("p4")}</p>
+        <p>{t("privacy")}</p>
         <p className="text-sm text-muted">{t("contentVersion", { version: CONTENT_VERSION })}</p>
       </Card>
     </div>

@@ -281,6 +281,7 @@
     "p2": "Los textos árabes de las súplicas se reproducen según las fuentes citadas. Las traducciones son traducciones del sentido redactadas para esta aplicación: no son oficiales y deben ser validadas por una persona cualificada.",
     "p3": "Las escuelas jurídicas difieren en algunos puntos; estas diferencias se señalan sin zanjarlas. En caso de duda, consulta a un sabio de confianza.",
     "p4": "La información práctica (accesos, reservas, permisos) cambia: compruébala en las plataformas oficiales Nusuk y del Ministerio del Hajj y la Umrah.",
+    "privacy": "Medición de audiencia: la aplicación usa Vercel Web Analytics, sin cookies ni identificadores personales, para contar las páginas vistas. Tu progreso, favoritos y contadores nunca salen de tu dispositivo.",
     "contentVersion": "Versión del contenido: {version}"
   },
   "errors": {

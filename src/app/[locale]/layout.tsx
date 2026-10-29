@@ -7,6 +7,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { routing, directionOf, locales, type Locale } from "@/i18n/routing";
 import { prefsBootScript } from "@/lib/prefs-shared";
 import { AppShell } from "@/components/shell/app-shell";
+import { Analytics } from "@vercel/analytics/next";
 
 // Fonts are downloaded at build time and self-hosted: nothing is fetched from a CDN at runtime.
 const geist = Geist({ subsets: ["latin", "latin-ext"], variable: "--font-geist", display: "swap" });
@@ -73,6 +74,8 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AppShell>{children}</AppShell>
         </NextIntlClientProvider>
+        {/* Vercel Web Analytics: cookieless page views, active only once deployed on Vercel. */}
+        <Analytics />
       </body>
     </html>
   );
